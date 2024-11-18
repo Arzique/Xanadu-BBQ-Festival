@@ -13,6 +13,10 @@
   font-family: system-ui, -apple-system, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--terracotta);
 }
@@ -68,9 +72,8 @@ body {
 }
 
 .logo {
-  width: 500px;
-  height: 500px;
-  margin-bottom: 2rem;
+  max-height: 75%;
+  padding: 1rem;
 }
 
 .date {
@@ -181,4 +184,160 @@ body {
 
 .event-info {
   flex: 1;
+}
+
+#sponsors {
+  margin: 2rem;
+}
+
+#sponsors img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+}
+
+#sponsors h3 {
+  font-size: 4rem;
+  font-weight: bold;
+  padding-top: 4rem;
+  padding-bottom: 1rem;
+}
+
+.sponsor-grid {
+  display: grid;
+  grid-template-columns: repeat(1fr 1fr 1fr 1fr 1fr);
+  grid-template-rows: repeat(1fr 1fr 1fr 1fr 1fr);
+  gap: 1rem;
+  place-items: center;
+}
+
+.presenting-sponsor {
+  grid-column: 1 / 6;
+  grid-row: 1;
+}
+
+.sponsor-images {
+  grid-column: 1 / 6;
+  grid-row: 2 / 4;
+}
+
+.sponsor-list {
+  line-height: 1.5rem;
+  align-content: center;
+  min-height: 300px;
+}
+
+#sponsor-list1 {
+  background-color: var(--rust);
+  padding: 2rem;
+}
+
+#sponsor-list2 {
+  background-color: var(--pig);
+  padding: 2rem;
+}
+
+#sponsor-list3 {
+  background-color: var(--dung);
+  padding: 2rem;
+}
+
+#sponsor-list4 {
+  background-color: var(--pig);
+  padding: 2rem;
+}
+
+#sponsor-list5 {
+  background-color: var(--rust);
+  padding: 2rem;
+}
+
+#highlights {
+  padding: 2rem;
+}
+
+#highlights h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+#highlights img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+  place-items: center;
+}
+
+#pic1 {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+}
+
+#pic2 {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+#pic3 {
+  grid-column: 4;
+  grid-row: 1;
+}
+
+#pic4 {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+#pic5 {
+  grid-column: 4;
+  grid-row: 2;
+}
+
+.bbq-video {
+  grid-column: 1 / 5;
+  grid-row: 3 / 5;
+}
+
+footer {
+  background-color: var(--dung);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer ul{
+    display: flex;
+    list-style: none;
+    padding: 1rem;
+    align-items: center;
+}
+
+footer ul li {
+  padding-right: 1rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+}
+
+footer a:hover {
+  color: white;
+}
+
+footer img {
+  height: 30px;
+}
+
+footer p {
+  padding: 1rem;
 }

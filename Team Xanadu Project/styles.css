@@ -19,6 +19,13 @@ html {
 
 body {
   background-color: var(--terracotta);
+  font-family: "Urbanist";
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Rubik Dirt";
 }
 
 /* Header/Banner Styles */

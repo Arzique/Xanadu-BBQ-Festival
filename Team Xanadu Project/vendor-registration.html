@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vendor Registration Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .registration-container {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 400px;
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 24px;
+      }
+      label {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      input[type="number"],
+      input[type="date"],
+      select,
+      textarea,
+      button,
+      input[type="file"] {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+      .form-footer {
+        text-align: center;
+        margin-top: 10px;
+      }
+      .form-footer a {
+        color: #007bff;
+        text-decoration: none;
+      }
+      .form-footer a:hover {
+        text-decoration: underline;
+      }
+      .checkbox-container {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+      }
+      .checkbox-container input {
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="registration-container">
+      <h1>Vendor Registration</h1>
+      <form
+        action="/submit-vendor-registration"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <label for="booth-name">Booth Name*</label>
+        <input
+          type="text"
+          id="booth-name"
+          name="booth_name"
+          placeholder="Enter Booth Name"
+          required
+        />
+
+        <label for="booth-contact">Booth Contact Name*</label>
+        <input
+          type="text"
+          id="booth-contact"
+          name="booth_contact"
+          placeholder="Enter Contact Name"
+          required
+        />
+
+        <label for="contact-phone">Contact Phone Number*</label>
+        <input
+          type="tel"
+          id="contact-phone"
+          name="contact_phone"
+          placeholder="Enter Phone Number"
+          required
+        />
+
+        <label for="mailing-address">Mailing Address*</label>
+        <textarea
+          id="mailing-address"
+          name="mailing_address"
+          rows="3"
+          placeholder="Enter Mailing Address"
+          required
+        ></textarea>
+
+        <label for="email-address">Email Address*</label>
+        <input
+          type="email"
+          id="email-address"
+          name="email_address"
+          placeholder="Enter Email Address"
+          required
+        />
+
+        <label for="vendor-type">Vendor Type*</label>
+        <select id="vendor-type" name="vendor_type" required>
+          <option value="" disabled selected>—Please choose an option—</option>
+          <option value="food">Food</option>
+          <option value="craft">Craft</option>
+          <option value="service">Service</option>
+        </select>
+
+        <label for="vendor-spaces">Vendor Spaces*</label>
+        <input
+          type="number"
+          id="vendor-spaces"
+          name="vendor_spaces"
+          min="1"
+          value="1"
+          required
+        />
+
+        <label for="insurance-upload">Insurance Certificate Upload</label>
+        <input type="file" id="insurance-upload" name="insurance_certificate" />
+
+        <label for="amount-due">Amount Due*</label>
+        <input
+          type="text"
+          id="amount-due"
+          name="amount_due"
+          placeholder="Enter Amount Due"
+          required
+        />
+
+        <div class="checkbox-container">
+          <input type="checkbox" id="agree-rules" name="agree_rules" required />
+          <label for="agree-rules"
+            >I have read and agree to the rules of the festival</label
+          >
+        </div>
+
+        <label for="signature">Electronic Signature*</label>
+        <input
+          type="text"
+          id="signature"
+          name="signature"
+          placeholder="Type Your Full Name"
+          required
+        />
+
+        <label for="registration-date">Date*</label>
+        <input
+          type="date"
+          id="registration-date"
+          name="registration_date"
+          required
+        />
+
+        <button type="submit">Submit Registration</button>
+      </form>
+    </div>
+  </body>
+</html>

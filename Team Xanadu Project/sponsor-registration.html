@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sponsor Registration Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .sponsor-container {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 600px;
+        overflow-y: auto;
+        max-height: 90vh;
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 24px;
+      }
+      label {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      input[type="file"],
+      input[type="date"],
+      select,
+      button,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        margin-top: 15px;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+      .checkbox-container {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+      }
+      .checkbox-container input {
+        margin-right: 10px;
+      }
+      .sponsor-level-info {
+        background-color: #f8f9fa;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 10px 0;
+        font-size: 14px;
+        overflow-y: auto;
+        max-height: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sponsor-container">
+      <h1>Sponsor Registration</h1>
+      <form
+        action="/submit-sponsor-registration"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <label for="sponsor-name">Sponsor Name*</label>
+        <input
+          type="text"
+          id="sponsor-name"
+          name="sponsor_name"
+          placeholder="Enter Sponsor Name"
+          required
+        />
+
+        <label for="sponsor-level">Sponsor Level*</label>
+        <select id="sponsor-level" name="sponsor_level" required>
+          <option value="" disabled selected>—Please choose an option—</option>
+          <optgroup label="Festival Sponsors">
+            <option value="grand_champion">$1000 - Grand Champion</option>
+            <option value="blue_ribbon">$750 - Blue Ribbon</option>
+            <option value="whole_hog">$500 - Whole Hog</option>
+            <option value="pit_crew">$300 - Pit Crew</option>
+          </optgroup>
+          <optgroup label="Event Sponsors">
+            <option value="eating_tent">$1000 - Public Eating Tent</option>
+            <option value="car_show">$1000 - Swine and Shine Car Show</option>
+            <option value="tractor_show">$500 - Antique Tractor Show</option>
+            <option value="tailgate_zone">$500 - Gameday Tailgate Zone</option>
+            <option value="cornhole">
+              $500 - Hog Wild Cornhole Tournament
+            </option>
+            <option value="dunking_booth">
+              $500 - Oink' N' Doink' Dunkin' Booth
+            </option>
+            <option value="touch_a_truck">
+              $300 - First Responders Appreciation + Touch-A-Truck
+            </option>
+            <option value="little_pig_town">$300 - Little Pig Town</option>
+            <option value="piglet_splash">
+              $300 - Piglet Splash, Dash, and Roll
+            </option>
+            <option value="pedal_pull">
+              $300 - Porky's Pedal Tractor Pull
+            </option>
+            <option value="princess_tea">
+              $300 - Princess Tea + Super Hero Hangout
+            </option>
+          </optgroup>
+        </select>
+
+        <label for="sponsor-details">Sponsor Level Details</label>
+        <div class="sponsor-level-info">
+          <p>
+            Details about each sponsorship level (e.g., benefits) can be
+            provided here in a scrollable section for reference.
+          </p>
+        </div>
+
+        <label for="contact-phone">Phone Number*</label>
+        <input
+          type="tel"
+          id="contact-phone"
+          name="contact_phone"
+          placeholder="Enter Phone Number"
+          required
+        />
+
+        <label for="mailing-address">Mailing Address*</label>
+        <textarea
+          id="mailing-address"
+          name="mailing_address"
+          rows="3"
+          placeholder="Enter Mailing Address"
+          required
+        ></textarea>
+
+        <label for="email-address">Email Address*</label>
+        <input
+          type="email"
+          id="email-address"
+          name="email_address"
+          placeholder="Enter Email Address"
+          required
+        />
+
+        <label for="sponsor-logo">Sponsor Logo</label>
+        <input
+          type="file"
+          id="sponsor-logo"
+          name="sponsor_logo"
+          accept="image/*"
+        />
+
+        <label for="amount-due">Amount Due*</label>
+        <input
+          type="text"
+          id="amount-due"
+          name="amount_due"
+          placeholder="Enter Amount Due"
+          required
+        />
+
+        <div class="checkbox-container">
+          <input type="checkbox" id="agree-terms" name="agree_terms" required />
+          <label for="agree-terms"
+            >I have read and agree to the sponsorship level I will pay
+            for.</label
+          >
+        </div>
+
+        <label for="signature">Electronic Signature*</label>
+        <input
+          type="text"
+          id="signature"
+          name="signature"
+          placeholder="Type Your Full Name"
+          required
+        />
+
+        <label for="registration-date">Date*</label>
+        <input
+          type="date"
+          id="registration-date"
+          name="registration_date"
+          required
+        />
+
+        <button type="submit">Submit Sponsorship</button>
+      </form>
+    </div>
+  </body>
+</html>

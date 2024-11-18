@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tennessee Hog Callin’ Championship Registration</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .registration-container {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 400px;
+        overflow-y: auto;
+        max-height: 90vh;
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 24px;
+      }
+      p {
+        text-align: center;
+        font-size: 14px;
+        margin-bottom: 20px;
+        color: #555;
+      }
+      label {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      input[type="number"],
+      input[type="file"],
+      textarea,
+      button {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        margin-top: 15px;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+      .checkbox-container {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+      }
+      .checkbox-container input {
+        margin-right: 10px;
+      }
+      .footer-note {
+        text-align: center;
+        font-size: 12px;
+        margin-top: 15px;
+        color: #777;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="registration-container">
+      <h1>Tennessee Hog Callin’ Championship</h1>
+      <p>
+        Join us at the Chester County BBQ Festival and compete for the title of
+        **Tennessee Hog Callin’ Champion**!
+      </p>
+      <form action="/submit-hog-call-registration" method="post">
+        <label for="registrant-name">Registrant Name*</label>
+        <input
+          type="text"
+          id="registrant-name"
+          name="registrant_name"
+          placeholder="Enter Your Name"
+          required
+        />
+
+        <label for="contact-phone">Contact Phone Number*</label>
+        <input
+          type="tel"
+          id="contact-phone"
+          name="contact_phone"
+          placeholder="Enter Phone Number"
+          required
+        />
+
+        <label for="mailing-address">Mailing Address*</label>
+        <textarea
+          id="mailing-address"
+          name="mailing_address"
+          rows="3"
+          placeholder="Enter Mailing Address"
+          required
+        ></textarea>
+
+        <label for="email-address">Email Address*</label>
+        <input
+          type="email"
+          id="email-address"
+          name="email_address"
+          placeholder="Enter Email Address"
+          required
+        />
+
+        <label for="amount-due">Amount Due*</label>
+        <input
+          type="text"
+          id="amount-due"
+          name="amount_due"
+          value="$10"
+          readonly
+        />
+
+        <div class="checkbox-container">
+          <input type="checkbox" id="agree-terms" name="agree_terms" required />
+          <label for="agree-terms"
+            >I agree to participate and abide by contest rules.</label
+          >
+        </div>
+
+        <button type="submit">Register Now</button>
+      </form>
+      <div class="footer-note">
+        <p>Thank you to our sponsors: TN Pork Producers and Tosh Farms.</p>
+      </div>
+    </div>
+  </body>
+</html>

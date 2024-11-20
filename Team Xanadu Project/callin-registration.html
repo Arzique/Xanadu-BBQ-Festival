@@ -4,88 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tennessee Hog Callin’ Championship Registration</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-      }
-      .registration-container {
-        background: #fff;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        width: 400px;
-        overflow-y: auto;
-        max-height: 90vh;
-      }
-      h1 {
-        text-align: center;
-        margin-bottom: 10px;
-        font-size: 24px;
-      }
-      p {
-        text-align: center;
-        font-size: 14px;
-        margin-bottom: 20px;
-        color: #555;
-      }
-      label {
-        display: block;
-        margin-top: 10px;
-        font-weight: bold;
-      }
-      input[type="text"],
-      input[type="email"],
-      input[type="tel"],
-      input[type="number"],
-      input[type="file"],
-      textarea,
-      button {
-        width: 100%;
-        padding: 10px;
-        margin: 5px 0;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-      }
-      button {
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        cursor: pointer;
-        margin-top: 15px;
-      }
-      button:hover {
-        background-color: #0056b3;
-      }
-      .checkbox-container {
-        display: flex;
-        align-items: center;
-        margin: 10px 0;
-      }
-      .checkbox-container input {
-        margin-right: 10px;
-      }
-      .footer-note {
-        text-align: center;
-        font-size: 12px;
-        margin-top: 15px;
-        color: #777;
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="Icons/favicon.ico" type="image/x-icon">
   </head>
-  <body>
+  <body class="registration-page" id="reg-page1">
     <div class="registration-container">
-      <h1>Tennessee Hog Callin’ Championship</h1>
-      <p>
-        Join us at the Chester County BBQ Festival and compete for the title of
-        **Tennessee Hog Callin’ Champion**!
-      </p>
+
+      <div class="form-info">
+        <h1>Tennessee Hog Callin’ Championship</h1>
+        <p>
+          Join us at the Chester County BBQ Festival and compete for the title of
+          **Tennessee Hog Callin’ Champion**!
+        </p>
+        <p>Not what you're looking for? <a href="index.html">Go back Home</a></p>
+      </div>
+    
+
       <form action="/submit-hog-call-registration" method="post">
         <label for="registrant-name">Registrant Name*</label>
         <input
@@ -141,9 +81,12 @@
 
         <button type="submit">Register Now</button>
       </form>
+
       <div class="footer-note">
-        <p>Thank you to our sponsors: TN Pork Producers and Tosh Farms.</p>
+        <p>Thank you to our Hog Callin' sponsors: TN Pork Producers and Tosh Farms.</p>
+        <a href="index.html">Back to Home</a>
       </div>
+
     </div>
   </body>
 </html>

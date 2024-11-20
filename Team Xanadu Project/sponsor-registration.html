@@ -4,83 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sponsor Registration Form</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-      }
-      .sponsor-container {
-        background: #fff;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        width: 600px;
-        overflow-y: auto;
-        max-height: 90vh;
-      }
-      h1 {
-        text-align: center;
-        margin-bottom: 20px;
-        font-size: 24px;
-      }
-      label {
-        display: block;
-        margin-top: 10px;
-        font-weight: bold;
-      }
-      input[type="text"],
-      input[type="email"],
-      input[type="tel"],
-      input[type="file"],
-      input[type="date"],
-      select,
-      button,
-      textarea {
-        width: 100%;
-        padding: 10px;
-        margin: 5px 0;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-      }
-      button {
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        cursor: pointer;
-        margin-top: 15px;
-      }
-      button:hover {
-        background-color: #0056b3;
-      }
-      .checkbox-container {
-        display: flex;
-        align-items: center;
-        margin: 10px 0;
-      }
-      .checkbox-container input {
-        margin-right: 10px;
-      }
-      .sponsor-level-info {
-        background-color: #f8f9fa;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        margin: 10px 0;
-        font-size: 14px;
-        overflow-y: auto;
-        max-height: 150px;
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="Icons/favicon.ico" type="image/x-icon">
   </head>
-  <body>
-    <div class="sponsor-container">
-      <h1>Sponsor Registration</h1>
+  <body class="registration-page" id="reg-page3">
+    <div class="registration-container">
+
+      <div class="form-info">
+        <h1>Sponsor Registration</h1>
+        <p>
+          Register to be a sponsor for the Chester County BBQ Festival!
+        </p>
+        <p>Not what you're looking for? <a href="index.html">Go back Home</a></p>
+      </div>
+
       <form
         action="/submit-sponsor-registration"
         method="post"
@@ -130,14 +73,6 @@
             </option>
           </optgroup>
         </select>
-
-        <label for="sponsor-details">Sponsor Level Details</label>
-        <div class="sponsor-level-info">
-          <p>
-            Details about each sponsorship level (e.g., benefits) can be
-            provided here in a scrollable section for reference.
-          </p>
-        </div>
 
         <label for="contact-phone">Phone Number*</label>
         <input
@@ -209,6 +144,12 @@
         />
 
         <button type="submit">Submit Sponsorship</button>
+
+        <div class="footer-note">
+          <p>Thank you for being a sponsor at the Chester County BBQ Festival!</p>
+          <a href="index.html">Back to Home</a>
+        </div>
+
       </form>
     </div>
   </body>

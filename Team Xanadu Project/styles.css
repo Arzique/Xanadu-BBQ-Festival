@@ -1,8 +1,10 @@
 :root {
   --terracotta: #fcdaca;
   --rust: #dc7a60;
+  --dark-rust: #874b3a;
   --pig: #fcb09c;
   --dung: #9f6657;
+  --dark-brown: #250902;
 }
 
 /* Universal Styles */
@@ -26,9 +28,13 @@ h1,
 h2,
 h3 {
   font-family: "Rubik Dirt";
+  font-weight: 500;
 }
 
-/* Header/Banner Styles */
+/*  */
+/* HOME */
+/*  */
+
 .header {
   width: 100%;
   background: rgba(0, 0, 0, 0.5);
@@ -85,7 +91,6 @@ h3 {
 
 .date {
   font-size: 3.5rem;
-  font-weight: bold;
   margin-bottom: 1rem;
   letter-spacing: 2px;
   border-top: white 2px solid;
@@ -99,7 +104,10 @@ h3 {
   letter-spacing: 1px;
 }
 
-/* Schedule Styles */
+/*  */
+/* SCHEDULE */
+/*  */
+
 #schedule {
   width: 100%;
 }
@@ -119,7 +127,6 @@ h3 {
 
 .schedule-title {
   font-size: 4rem;
-  font-weight: bold;
   margin-inline: 2rem;
   padding-top: 4rem;
 }
@@ -150,13 +157,11 @@ h3 {
 
 .schedule-day h2 {
   font-size: 1.5rem;
-  font-weight: bold;
   margin-bottom: 1rem;
 }
 
 .schedule-day h3 {
   font-size: 1.2rem;
-  font-weight: bold;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
 }
@@ -173,7 +178,6 @@ h3 {
 
 .entertainment h2 {
   font-size: 1.5rem;
-  font-weight: bold;
   margin-bottom: 1rem;
 }
 
@@ -186,12 +190,106 @@ h3 {
 .event-time {
   flex: 0 0 80px;
   margin-right: 3rem;
-  font-weight: bold;
 }
 
 .event-info {
   flex: 1;
 }
+
+/*  */
+/* REGISTRATION */
+/*  */
+
+#registration {
+  padding: 2rem;
+}
+
+#registration h1 {
+  font-size: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+#registration-grid {
+  display: grid;
+  grid-template-columns: repeat();
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+#registration a {
+  text-decoration: none;
+  position: relative;
+  display: block;
+}
+
+.card {
+  background-color: var(--rust);
+  padding: 2rem;
+  color: white;
+  font-size: 25px;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+.card:hover {
+  color: white;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+  transition: background 0.3s ease;
+}
+
+.card:hover::before {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.card h2, .card p {
+  position: relative;
+  z-index: 1;
+}
+
+#hog-card {
+  grid-column: 1 / 3;
+  grid-row: 1 / 5;
+  height: 400px;
+  background-image: url(Images/hog-callin.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+#vendor-card {
+  grid-column: 3 / 5;
+  grid-row: 1 / 3;
+  background-image: url(Images/vendor.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+#sponsor-card {
+  grid-column: 3 / 5;
+  grid-row: 3 / 5;
+  background-image: url(Highlights/header.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+#registration a:hover {
+  background-color: black;
+}
+
+/*  */
+/* SPONSORS */
+/*  */
 
 #sponsors {
   margin: 2rem;
@@ -205,7 +303,6 @@ h3 {
 
 #sponsors h3 {
   font-size: 4rem;
-  font-weight: bold;
   padding-top: 4rem;
   padding-bottom: 1rem;
 }
@@ -259,13 +356,16 @@ h3 {
   padding: 2rem;
 }
 
+/*  */
+/* HIGHLIGHTS */
+/*  */
+
 #highlights {
   padding: 2rem;
 }
 
 #highlights h1 {
   font-size: 4rem;
-  font-weight: bold;
   padding-top: 2rem;
   padding-bottom: 1rem;
 }
@@ -314,8 +414,12 @@ h3 {
   grid-row: 3 / 5;
 }
 
+/*  */
+/* FOOTER */
+/*  */
+
 footer {
-  background-color: var(--dung);
+  background-color: var(--dark-brown);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -334,7 +438,7 @@ footer ul li {
 
 footer a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 footer a:hover {
@@ -347,4 +451,119 @@ footer img {
 
 footer p {
   padding: 1rem;
+  color: white;
+}
+
+/*  */
+/* REGISTRATION PAGES */
+/*  */
+
+.registration-page {
+  font-family: "Urbanist", system-ui, -apple-system, sans-serif;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.registration-container {
+  max-width: 600px;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.registration-container h1 {
+  font-family: "Rubik Dirt";
+  text-align: center;
+  color: #3b3b3b;
+  margin-bottom: 15px;
+}
+
+.registration-container p {
+  font-family: "Urbanist";
+  text-align: center;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+#vendor-type, #vendor-spaces, #insurance-upload, input[type="date"], #sponsor-level, #sponsor-logo {
+  padding: 6px;
+  margin-bottom: 15px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+#amount-due {
+  background-color: #f0f0f0;
+  cursor: not-allowed;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.checkbox-container input {
+  margin-right: 10px;
+}
+
+.checkbox-container label {
+  font-size: 14px;
+  color: #555;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  background-color: var(--rust);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--dark-rust);
+}
+
+.form-info a, .footer-note a {
+  color: var(--rust);
+}
+
+.form-info a:hover, .footer-note a:hover {
+  font-weight: 600;
+}
+
+.footer-note {
+  text-align: center;
+  font-size: 16px;
+  color: #777;
+  margin-top: 30px;
 }

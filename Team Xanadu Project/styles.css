@@ -253,7 +253,8 @@ h3 {
   background: rgba(0, 0, 0, 0.8);
 }
 
-.card h2, .card p {
+.card h2,
+.card p {
   position: relative;
   z-index: 1;
 }
@@ -285,6 +286,60 @@ h3 {
 
 #registration a:hover {
   background-color: black;
+}
+
+/* Info */
+
+#info {
+  padding: 2rem;
+}
+
+.info-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 1rem;
+  /* max-width: 1200px; */
+  margin: 0 auto;
+}
+
+.info-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.info-text {
+  padding: 2rem;
+  background: rgba(233, 150, 122, 0.2);
+  border-radius: 8px;
+}
+
+.info-text h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.info-text p {
+  line-height: 1.5;
+}
+
+.address {
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+.faq-question {
+  font-style: italic;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.faq-answer {
+  margin-bottom: 1rem;
 }
 
 /*  */
@@ -425,11 +480,11 @@ footer {
   justify-content: space-between;
 }
 
-footer ul{
-    display: flex;
-    list-style: none;
-    padding: 1rem;
-    align-items: center;
+footer ul {
+  display: flex;
+  list-style: none;
+  padding: 1rem;
+  align-items: center;
 }
 
 footer ul li {
@@ -508,7 +563,12 @@ textarea {
   font-size: 14px;
 }
 
-#vendor-type, #vendor-spaces, #insurance-upload, input[type="date"], #sponsor-level, #sponsor-logo {
+#vendor-type,
+#vendor-spaces,
+#insurance-upload,
+input[type="date"],
+#sponsor-level,
+#sponsor-logo {
   padding: 6px;
   margin-bottom: 15px;
 }
@@ -553,11 +613,13 @@ button:hover {
   background-color: var(--dark-rust);
 }
 
-.form-info a, .footer-note a {
+.form-info a,
+.footer-note a {
   color: var(--rust);
 }
 
-.form-info a:hover, .footer-note a:hover {
+.form-info a:hover,
+.footer-note a:hover {
   font-weight: 600;
 }
 

@@ -109,91 +109,96 @@ h3 {
 /*  */
 
 #schedule {
-  width: 100%;
-}
-
-.schedule-grid {
-  display: grid;
-  gap: 1rem;
-  margin: 2rem;
-  grid-template-columns: repeat(1fr 1fr 1fr);
-  grid-template-rows: repeat(1fr 1fr 1fr 1fr);
-  grid-template-areas:
-    "tuesday tuesday entertainment"
-    "thursday thursday entertainment"
-    "friday friday entertainment"
-    "saturday saturday saturday";
+  padding: 2rem;
 }
 
 .schedule-title {
   font-size: 4rem;
-  margin-inline: 2rem;
-  padding-top: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
 }
 
-.schedule-day {
-  padding: 1.5rem;
+.accordion-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  align-items: start;
 }
 
-.tuesday {
-  background-color: var(--rust);
-  grid-area: tuesday;
+.accordion {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  border: 1px solid var(--dark-rust);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.3s;
 }
 
-.thursday {
-  background-color: var(--dung);
-  grid-area: thursday;
+.accordion:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.friday {
-  background-color: var(--rust);
-  grid-area: friday;
-}
-
-.saturday {
-  background-color: var(--dung);
-  grid-area: saturday;
-}
-
-.schedule-day h2 {
+.accordion-header {
+  background: var(--rust);
+  /* color: white; */
+  padding: 1rem;
   font-size: 1.5rem;
-  margin-bottom: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.schedule-day h3 {
-  font-size: 1.2rem;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
+.accordion-header:hover {
+  background: var(--dark-rust);
+  color: whitesmoke;
 }
 
-.schedule-day p {
-  margin-bottom: 1rem;
-  line-height: 1.4;
+.accordion-header::after {
+  content: "▼";
+  font-size: 1rem;
+  transition: transform 0.3s;
 }
 
-.entertainment {
-  background: var(--pig);
-  grid-area: entertainment;
+.accordion-header.active::after {
+  transform: rotate(-180deg);
 }
 
-.entertainment h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  background: var(--terracotta);
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 1rem;
+  position: relative;
+}
+
+.accordion-content.open {
+  max-height: 1000px; /* Adjust as needed */
+  padding: 1rem;
 }
 
 .event {
   display: flex;
   gap: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .event-time {
-  flex: 0 0 80px;
-  margin-right: 3rem;
+  font-weight: bold;
+  min-width: 100px;
+  color: var(--dark-brown);
 }
 
 .event-info {
-  flex: 1;
+  color: var(--dark-rust);
+}
+
+@media (max-width: 768px) {
+  .accordion-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /*  */

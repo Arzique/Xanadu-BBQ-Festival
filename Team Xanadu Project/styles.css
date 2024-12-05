@@ -131,69 +131,58 @@ h3 {
 
 .schedule-title {
   font-size: 4rem;
-  padding-top: 2rem;
-  padding-bottom: 1rem;
+  margin-inline: 2rem;
+  padding-top: 4rem;
 }
 
-.accordion-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-  align-items: start;
+.schedule-day {
+  padding: 1.5rem;
 }
 
-.accordion {
-  display: flex;
-  flex-direction: column;
-  height: auto;
-  border: 1px solid var(--dark-rust);
-  border-radius: 8px;
-  overflow: hidden;
-  transition: box-shadow 0.3s;
+.tuesday {
+  background-color: var(--rust);
+  grid-area: tuesday;
 }
 
-.accordion:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.thursday {
+  background-color: var(--dung);
+  grid-area: thursday;
 }
 
-.accordion-header {
-  background: var(--rust);
-  /* color: white; */
-  padding: 1rem;
+.friday {
+  background-color: var(--rust);
+  grid-area: friday;
+}
+
+.saturday {
+  background-color: var(--dung);
+  grid-area: saturday;
+}
+
+.schedule-day h2 {
   font-size: 1.5rem;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  margin-bottom: 1rem;
 }
 
-.accordion-header:hover {
-  background: var(--dark-rust);
-  color: whitesmoke;
+.schedule-day h3 {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
 }
 
-.accordion-header::after {
-  content: "▼";
-  font-size: 1rem;
-  transition: transform 0.3s;
+.schedule-day p {
+  margin-bottom: 1rem;
+  line-height: 1.4;
 }
 
-.accordion-header.active::after {
-  transform: rotate(-180deg);
+.entertainment {
+  background: var(--pig);
+  grid-area: entertainment;
 }
 
-.accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  background: var(--terracotta);
-  transition: max-height 0.3s ease, padding 0.3s ease;
-  padding: 0 1rem;
-  position: relative;
-}
-
-.accordion-content.open {
-  max-height: 1000px; /* Adjust as needed */
-  padding: 1rem;
+.entertainment h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .event {
@@ -210,13 +199,7 @@ h3 {
 }
 
 .event-info {
-  color: var(--dark-rust);
-}
-
-@media (max-width: 768px) {
-  .accordion-grid {
-    grid-template-columns: 1fr;
-  }
+  flex: 1;
 }
 
 /*  */

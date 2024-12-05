@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap"
       rel="stylesheet"
     />
     <link rel="icon" href="Icons/favicon.ico" type="image/x-icon" />
@@ -26,200 +26,320 @@
       </nav>
     </header>
 
+    <div class="mobile-header">
+      <button class="hamburger-button">
+        <img src="Icons/icons8-menu.svg" alt="" class="hamburger-icon" />
+        <img src="Icons/x-icon.svg" alt="" class="close-icon" />
+      </button>
+
+      <nav class="dropdown-menu" id="dropdownMenu">
+        <ul>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#registration">Registration</a></li>
+          <li><a href="#info">About</a></li>
+          <li><a href="#sponsors">Sponsors</a></li>
+          <li><a href="#highlights">Highlights</a></li>
+        </ul>
+      </nav>
+    </div>
+
     <section class="banner">
-      <img
-        class="background"
-        src="Highlights/opener.gif"
-        alt="placeholder for gif"
-      />
+      <video class="background" autoplay loop muted>
+        <source src="Highlights/video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
       <div class="banner-content">
         <img
           class="logo"
           src="Images/bbq-festival-logo.svg"
           alt="Chester County BBQ Festival Logo"
         />
-        <h1 class="date">OCT 4-5</h1>
+        <h1 class="date">OCT 3-5</h1>
         <h2 class="tagline">FREE FAMILY FUN!</h2>
       </div>
     </section>
 
     <section id="schedule">
       <h1 class="schedule-title">SCHEDULE</h1>
-      <div class="accordion-grid">
-        <!-- Tuesday Events -->
-        <div class="accordion">
-          <h2 class="accordion-header">Tuesday, Sep. 24th</h2>
-          <div class="accordion-content">
+
+      <div class="schedule-grid">
+        <div class="schedule-day tuesday">
+          <h2 class="day-title">
+            TUE. SEP. 24TH
+            <img src="Icons/down-arrow.svg" alt="" class="arrow-icon" />
+          </h2>
+
+          <div class="dropdown-content">
             <div class="event">
-              <span class="event-time">11:30 a.m.</span>
-              <span class="event-info"
-                >BBQ Festival Sponsorship Luncheon - Henderson Church of
-                Christ</span
-              >
+              <div class="event-time">11:30 a.m.</div>
+              <div class="event-info">
+                BBQ Festival Sponsorship Luncheon <br />-Henderson Church of
+                Christ
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Thursday Events -->
-        <div class="accordion">
-          <h2 class="accordion-header">Thursday, Oct. 3rd</h2>
-          <div class="accordion-content">
+        <div class="schedule-day thursday">
+          <h2 class="day-title">
+            THU. OCT. 3RD
+            <img src="Icons/down-arrow.svg" alt="" class="arrow-icon" />
+          </h2>
+
+          <div class="dropdown-content">
             <div class="event">
-              <span class="event-time">6:00 p.m.</span>
-              <span class="event-info">
-                Touch-a-Truck and First Responders Appreciation - Henderson
-                Church of Christ parking lot. Hands-on event with Emergency &
-                Utility Vehicles.
-              </span>
+              <div class="event-time">6:00 p.m.</div>
+              <div class="event-info">
+                Touch-a-Truck and First Responders Appreciation sponsored by
+                Jones Contractors <br />-Henderson Church of Christ parking lot.
+              </div>
             </div>
             <div class="event">
-              <span class="event-time">6:30 p.m.</span>
-              <span class="event-info">
-                Piglet's Splash Dash and Roll - Henderson Church of Christ
-                parking lot. Fun obstacle course for kids.
-              </span>
+              <div class="event-time">6:30 p.m.</div>
+              <div class="event-info">
+                Piglet's Splash Dash and Roll sponsored by Jones Contractors
+                <br />-Henderson Church of Christ parking lot
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Friday Events -->
-        <div class="accordion">
-          <h2 class="accordion-header">Friday, Oct. 4th</h2>
-          <div class="accordion-content">
+        <div class="schedule-day friday">
+          <h2 class="day-title">
+            FRI. OCT. 4TH
+            <img src="Icons/down-arrow.svg" alt="" class="arrow-icon" />
+          </h2>
+
+          <div class="dropdown-content">
             <div class="event">
-              <span class="event-time">10:00 a.m.</span>
-              <span class="event-info">Music</span>
+              <div class="event-time">8:00 a.m.</div>
+              <div class="event-info">
+                The Piglet Pen sponsored by Henderson Assembly of God
+                <br />Courthouse Lawn
+              </div>
             </div>
             <div class="event">
-              <span class="event-time">12:45 p.m.</span>
-              <span class="event-info">Open Ceremony, FHU Chorale</span>
+              <div class="event-time">9:00 a.m.</div>
+              <div class="event-info">
+                Gameday Tailgate Zone sponsored by Besso's and Quality Metal
+                Stamping <br />Behind the Courthouse
+              </div>
             </div>
             <div class="event">
-              <span class="event-time">1:30 p.m.</span>
-              <span class="event-info">Local Talent TBD</span>
+              <div class="event-time">9:30 a.m.</div>
+              <div class="event-info">
+                Entertainment at the E&T Contracting Stage <br />Courthouse Lawn
+              </div>
             </div>
             <div class="event">
-              <span class="event-time">1:55 p.m.</span>
-              <span class="event-info">Irene Rinks</span>
+              <div class="event-time">10:00 a.m.</div>
+              <div class="event-info">
+                Little Pig Town Ride Area sponsored by Keestone Academy
+                <br />Behind the County Office Building
+              </div>
             </div>
             <div class="event">
-              <span class="event-time">2:00 p.m.</span>
-              <span class="event-info">Daniel McClain</span>
+              <div class="event-time">11:00 a.m.</div>
+              <div class="event-info">
+                Opening Ceremony at the E& T Contracting <br />
+              </div>
             </div>
             <div class="event">
-              <span class="event-time">2:30 p.m.</span>
-              <span class="event-info">Mike McCutchen & Jerry Lowe</span>
+              <div class="event-time">12:00 p.m.</div>
+              <div class="event-info">
+                Foam-town Frenzy sponsored by Casey Realtors <br />In front of
+                City Hall Building
+              </div>
             </div>
             <div class="event">
-              <span class="event-time">3:00 p.m.</span>
-              <span class="event-info">CCHS & CCJHS Chorus</span>
+              <div class="event-time">2:00 p.m.</div>
+              <div class="event-info">
+                Talent Show sponsored by E&T Contracting <br />E&T Contracting
+                stage
+              </div>
             </div>
             <div class="event">
-              <span class="event-time">3:30 p.m.</span>
-              <span class="event-info"
-                >Old Friendship Baptist Church Worship Team</span
-              >
+              <div class="event-time">3:00 p.m.</div>
+              <div class="event-info">
+                "Spoon's" Antique Tractor Show sponsored by First Farmers Co-op
+                and Cherry and Son Sales <br />Main Street in front of the Old
+                Main Bldg.
+              </div>
             </div>
             <div class="event">
-              <span class="event-time">4:30 p.m.</span>
-              <span class="event-info">Raven Henley</span>
+              <div class="event-time">4:00 p.m.</div>
+              <div class="event-info">
+                Pig Trot 5k/1-Mile sponsored by FirstBank <br />No Xcuse Fitness
+              </div>
             </div>
             <div class="event">
-              <span class="event-time">5:00 p.m.</span>
-              <span class="event-info"
-                >Christ Community Church Children's Choir</span
-              >
-            </div>
-            <div class="event">
-              <span class="event-time">5:30 p.m.</span>
-              <span class="event-info">Kameron Presnull</span>
-            </div>
-            <div class="event">
-              <span class="event-time">6:00 p.m.</span>
-              <span class="event-info"
-                >Blake Hopper & The Tennessee Tradition</span
-              >
-            </div>
-            <div class="event">
-              <span class="event-time">7:00 p.m.</span>
-              <span class="event-info"
-                >Chester County BBQ Festival Talent Competition</span
-              >
+              <div class="event-time">5:00 p.m.</div>
+              <div class="event-info">
+                BBQ Buddies Wagon Train Parade sponsored by Noah's Ark Preschool
+                <br />Meet at Sue Shelton White Park
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Saturday Events -->
-        <div class="accordion">
-          <h2 class="accordion-header">Saturday, Oct. 5th</h2>
-          <div class="accordion-content">
+        <div class="schedule-day saturday">
+          <h2 class="day-title">
+            SAT. OCT. 5TH
+            <img src="Icons/down-arrow.svg" alt="" class="arrow-icon" />
+          </h2>
+
+          <div class="dropdown-content">
             <div class="event">
-              <span class="event-time">9:00 a.m.</span>
-              <span class="event-info">BBQ Buddies Wagon Train Parade</span>
+              <div class="event-time">11:30 a.m.</div>
+              <div class="event-info">
+                Street Dancing <br />Dancing on Crook Ave.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="schedule-day entertainment">
+          <h2>ENTERTAINMENT</h2>
+
+          <h3 class="day-title">
+            FRI. OCT. 4TH
+            <img src="Icons/down-arrow.svg" alt="" class="arrow-icon" />
+          </h3>
+          <div class="dropdown-content">
+            <div class="event">
+              <div class="event-time">10:00 a.m.</div>
+              <div class="event-info">Music</div>
             </div>
             <div class="event">
-              <span class="event-time">9:30 a.m.</span>
-              <span class="event-info">Kimberlie Helton's School of Voice</span>
+              <div class="event-time">12:45 p.m.</div>
+              <div class="event-info">Open Ceremony, FHU Chorale</div>
             </div>
             <div class="event">
-              <span class="event-time">11:30 a.m.</span>
-              <span class="event-info">CCHS Band</span>
+              <div class="event-time">1:30 p.m.</div>
+              <div class="event-info">Local Talent TBD</div>
             </div>
             <div class="event">
-              <span class="event-time">12:00 p.m.</span>
-              <span class="event-info">Porky's Pedal Tractor Pull</span>
+              <div class="event-time">1:55 p.m.</div>
+              <div class="event-info">Irene Rinks</div>
             </div>
             <div class="event">
-              <span class="event-time">12:30 p.m.</span>
-              <span class="event-info">Charger's Mutt Strut Parade</span>
+              <div class="event-time">2:00 p.m.</div>
+              <div class="event-info">Daniel McClain</div>
             </div>
             <div class="event">
-              <span class="event-time">12:45 p.m.</span>
-              <span class="event-info">CCHS Cheer Squad</span>
+              <div class="event-time">2:30 p.m.</div>
+              <div class="event-info">Mike McCutchen & Jerry Lowe</div>
             </div>
             <div class="event">
-              <span class="event-time">1:00 p.m.</span>
-              <span class="event-info"
-                >TN State Championship Hog Callin' Contest</span
-              >
+              <div class="event-time">3:00 p.m.</div>
+              <div class="event-info">CCHS & CCJHS Chorus</div>
             </div>
             <div class="event">
-              <span class="event-time">2:00 p.m.</span>
-              <span class="event-info">Karley Heinsohn & Cadence Weaver</span>
+              <div class="event-time">3:30 p.m.</div>
+              <div class="event-info">
+                Old Friendship Baptist Church Worship Team
+              </div>
             </div>
             <div class="event">
-              <span class="event-time">2:30 p.m.</span>
-              <span class="event-info">Portia Bradshaw</span>
+              <div class="event-time">4:30 p.m.</div>
+              <div class="event-info">Raven Henley</div>
             </div>
             <div class="event">
-              <span class="event-time">3:00 p.m.</span>
-              <span class="event-info">Lakelin Lemmings & Hunt Pipkin</span>
+              <div class="event-time">5:00 p.m.</div>
+              <div class="event-info">
+                Christ Community Church Children's Choir
+              </div>
             </div>
             <div class="event">
-              <span class="event-time">4:00 p.m.</span>
-              <span class="event-info">FHU Jazz Band</span>
+              <div class="event-time">5:30 p.m.</div>
+              <div class="event-info">Kameron Presnull</div>
             </div>
             <div class="event">
-              <span class="event-time">5:00 p.m.</span>
-              <span class="event-info">Jeff Smith Trio-Gospel</span>
+              <div class="event-time">6:00 p.m.</div>
+              <div class="event-info">
+                Blake Hopper & The Tennessee Tradition
+              </div>
             </div>
             <div class="event">
-              <span class="event-time">5:30 p.m.</span>
-              <span class="event-info">4 Docs and a Jock</span>
+              <div class="event-time">7:00 p.m.</div>
+              <div class="event-info">
+                Chester County BBQ Festival Talent Competition
+              </div>
+            </div>
+          </div>
+
+          <h3 class="day-title">
+            SAT. OCT. 5TH
+            <img src="Icons/down-arrow.svg" alt="" class="arrow-icon" />
+          </h3>
+          <div class="dropdown-content">
+            <div class="event">
+              <div class="event-time">9:00 a.m.</div>
+              <div class="event-info">BBQ Buddies Wagon Train Parade</div>
             </div>
             <div class="event">
-              <span class="event-time">6:30 p.m.</span>
-              <span class="event-info">Lil' Johnie Williams</span>
+              <div class="event-time">9:30 a.m.</div>
+              <div class="event-info">Kimberlie Helton's School of Voice</div>
             </div>
             <div class="event">
-              <span class="event-time">7:00 p.m.</span>
-              <span class="event-info">Ben Clayton</span>
+              <div class="event-time">11:30 a.m.</div>
+              <div class="event-info">CCHS Band</div>
             </div>
             <div class="event">
-              <span class="event-time">7:30-9:30 p.m.</span>
-              <span class="event-info"
-                >Good Time/Hotwire Band & Street Dancing</span
-              >
+              <div class="event-time">12:00 p.m.</div>
+              <div class="event-info">Porky's Pedal Tractor Pull</div>
+            </div>
+            <div class="event">
+              <div class="event-time">12:30 p.m.</div>
+              <div class="event-info">Charger's Mutt Strut Parade</div>
+            </div>
+            <div class="event">
+              <div class="event-time">12:45 p.m.</div>
+              <div class="event-info">CCHS Cheer Squad</div>
+            </div>
+            <div class="event">
+              <div class="event-time">1:00 p.m.</div>
+              <div class="event-info">
+                TN State Championship Hog Callin' Contest
+              </div>
+            </div>
+            <div class="event">
+              <div class="event-time">2:00 p.m.</div>
+              <div class="event-info">Karley Heinsohn & Cadence Weaver</div>
+            </div>
+            <div class="event">
+              <div class="event-time">2:30 p.m.</div>
+              <div class="event-info">Portia Bradshaw</div>
+            </div>
+            <div class="event">
+              <div class="event-time">3:00 p.m.</div>
+              <div class="event-info">Lakelin Lemmings & Hunt Pipkin</div>
+            </div>
+            <div class="event">
+              <div class="event-time">4:00 p.m.</div>
+              <div class="event-info">FHU Jazz Band</div>
+            </div>
+            <div class="event">
+              <div class="event-time">5:00 p.m.</div>
+              <div class="event-info">Jeff Smith Trio-Gospel</div>
+            </div>
+            <div class="event">
+              <div class="event-time">5:30 p.m.</div>
+              <div class="event-info">4 Docs and a Jock</div>
+            </div>
+            <div class="event">
+              <div class="event-time">6:30 p.m.</div>
+              <div class="event-info">Lil' Johnie Williams</div>
+            </div>
+            <div class="event">
+              <div class="event-time">7:00 p.m.</div>
+              <div class="event-info">Ben Clayton</div>
+            </div>
+            <div class="event">
+              <div class="event-time">7:30-9:30 p.m.</div>
+              <div class="event-info">
+                Good Time/Hotwire Band & Street Dancing
+              </div>
             </div>
           </div>
         </div>
@@ -227,7 +347,7 @@
     </section>
 
     <section id="registration">
-      <h1>REGISTRATION</h1>
+      <h1 class="registration-title">REGISTRATION</h1>
 
       <div id="registration-grid">
         <a href="callin-registration.html" class="card" id="hog-card">
@@ -251,39 +371,58 @@
         />
 
         <div class="info-text about">
-          <h1>ABOUT</h1>
-          <p>
-            The Chester County BBQ Festival in Henderson, Tennessee, offers
-            mouthwatering BBQ, live music, quirky contests like Hog Callin', and
-            a family-friendly atmosphere. Enjoy a fun, free day supporting local
-            vendors on historic Main Street.
-          </p>
-          <p class="address">
-            111 East Main Street<br />
-            PO Box 1976<br />
-            Henderson, TN 38340
-          </p>
+          <div class="dropdown-title">
+            <h1>
+              ABOUT
+              <img src="Icons/down-arrow.svg" alt="" class="arrow-icon" />
+            </h1>
+          </div>
+
+          <div class="dropdown-content">
+            <p>
+              The Chester County BBQ Festival in Henderson, Tennessee, offers
+              mouthwatering BBQ, live music, quirky contests like Hog Callin',
+              and a family-friendly atmosphere. Enjoy a fun, free day supporting
+              local vendors on historic Main Street.
+            </p>
+            <p class="address">
+              111 East Main Street<br />
+              PO Box 1976<br />
+              Henderson, TN 38340
+            </p>
+          </div>
         </div>
+
         <div class="info-text faq">
-          <h1>FAQ</h1>
-          <p class="faq-question">
-            Are there accommodations for people with disabilities?
-          </p>
-          <p class="faq-answer">
-            Yes, there are ramps on almost every sidewalk at the event.
-          </p>
+          <div class="dropdown-title">
+            <h1>
+              FAQ
+              <img src="Icons/down-arrow.svg" alt="" class="arrow-icon" />
+            </h1>
+          </div>
 
-          <p class="faq-question">Are animals welcome?</p>
-          <p class="faq-answer">Absolutely! As long as they are on a leash!</p>
+          <div class="dropdown-content">
+            <p class="faq-question">
+              Are there accommodations for people with disabilities?
+            </p>
+            <p class="faq-answer">
+              Yes, there are ramps on almost every sidewalk at the event.
+            </p>
 
-          <p class="faq-question">Are there gluten free options?</p>
-          <p class="faq-answer">
-            Yes, certain vendors will have gluten free options.
-          </p>
+            <p class="faq-question">Are animals welcome?</p>
+            <p class="faq-answer">
+              Absolutely! As long as they are on a leash!
+            </p>
+
+            <p class="faq-question">Are there gluten free options?</p>
+            <p class="faq-answer">
+              Yes, certain vendors will have gluten free options.
+            </p>
+          </div>
         </div>
 
         <img
-          src="https://unsplash.it/600/400"
+          src="Highlights/clown1.jpg"
           alt="BBQ Festival"
           class="info-image"
         />
@@ -295,7 +434,8 @@
 
       <div class="sponsor-grid">
         <div class="presenting-sponsor">
-          <img src="Sponsor images/fhu-logo.png" alt="0" />
+          <h2>Presenting Sponsor:</h2>
+          <img src="Sponsor images/centbank-logo.png" alt="0" />
         </div>
 
         <img class="sponsor-img" src="Sponsor images/anew-logo.png" alt="1" />
@@ -305,7 +445,7 @@
         <img class="sponsor-img" src="Sponsor images/et-logo.png" alt="5" />
         <img class="sponsor-img" src="Sponsor images/aeneas-logo.png" alt="" />
         <img class="sponsor-img" src="Sponsor images/afp-logo.png" alt="" />
-        <img class="sponsor-img" src="Sponsor images/cb-logo.png" alt="" />
+        <img class="sponsor-img" src="Sponsor images/fhu-logo.png" alt="" />
         <img class="sponsor-img" src="Sponsor images/wbbj-logo.png" alt="" />
         <img class="sponsor-img" src="Sponsor images/aa-logo.jpg" alt="" />
 
@@ -326,7 +466,6 @@
         <ul class="sponsor-list" id="sponsor-list3">
           <li>Quality Metal Stamping</li>
           <li>Lonnie Cobb Ford</li>
-          <li>Southern Oaks Assisted Living</li>
           <li>Toshia Johnson, State Farm</li>
           <li>Henderson Assembly of God</li>
         </ul>
@@ -342,6 +481,7 @@
           <li>TLM Associates</li>
           <li>Duck's Market</li>
           <li>Keestone Academy</li>
+          <li>Southern Oaks Assisted Living</li>
         </ul>
       </div>
     </section>
@@ -350,7 +490,7 @@
       <h1>HIGHLIGHTS</h1>
 
       <div class="highlights-grid">
-        <img class="" id="pic1" src="Highlights/winners.jpg" alt="" />
+        <img id="pic1" src="Highlights/winners.jpg" alt="" />
         <img id="pic2" src="Highlights/ladydog.jpg" alt="" />
         <img id="pic3" src="Highlights/people.jpg" alt="" />
         <img id="pic4" src="Highlights/toddler.jpg" alt="" />
@@ -361,13 +501,16 @@
     <footer>
       <ul>
         <li>
-          <a href="https://www.facebook.com/ChesterCountyBBQFestival"
+          <a
+            href="https://www.facebook.com/ChesterCountyBBQFestival"
+            class="footer-link"
             ><img src="Icons/icons8-facebook.svg" alt=""
           /></a>
         </li>
         <li>
           <a
             href="https://www.google.com/maps/place/Henderson,+TN+38340/@35.442749,-88.651912,13z/data=!3m1!4b1!4m6!3m5!1s0x887c24c510463491:0x493d963f1d83b6f7!8m2!3d35.4392435!4d-88.641441!16zL20vMF90NzE?entry=ttu&g_ep=EgoyMDI0MTExNy4wIKXMDSoASAFQAw%3D%3D"
+            class="footer-link"
             ><img src="Icons/icons8-google-maps.svg" alt=""
           /></a>
         </li>
